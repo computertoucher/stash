@@ -184,8 +184,10 @@ func (g Generator) previewVideoChunk(lockCtx *fsutil.LockContext, fn string, opt
 		"-profile:v", "high",
 		"-level", "4.2",
 		"-preset", options.Preset,
-		"-crf", "21",
-		"-threads", "4",
+		"-crf", "30",
+		"-threads", "1",
+		"-movflags", "+faststart",
+		"-sws_flags", "fast_bilinear",
 		"-strict", "-2",
 	)
 

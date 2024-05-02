@@ -77,8 +77,8 @@ func (g Generator) transcode(input string, options TranscodeOptions) generateFn 
 			"-pix_fmt", "yuv420p",
 			"-profile:v", "high",
 			"-level", "4.2",
-			"-preset", "superfast",
-			"-crf", "30",
+			"-preset", "ultrafast",
+			"-crf", "25",
 			"-threads", "1",
 		)
 
@@ -109,8 +109,8 @@ func (g Generator) transcodeVideo(input string, options TranscodeOptions) genera
 			"-pix_fmt", "yuv420p",
 			"-profile:v", "high",
 			"-level", "4.2",
-			"-preset", "superfast",
-			"-crf", "30",
+			"-preset", "ultrafast",
+			"-crf", "25",
 			"-threads", "1",
 		)
 
