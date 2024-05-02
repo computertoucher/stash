@@ -293,12 +293,12 @@ func (g Generator) previewVideoToImage(input string) generateFn {
 		videoArgs = videoArgs.VideoFilter(videoFilter)
 
 		videoArgs = append(videoArgs,
-			"-lossless", "1",
-			"-q:v", "70",
-			"-compression_level", "6",
+			"-lossless", "0",
+			"-q:v", "40",
+			"-compression_level", "4",
 			"-preset", "default",
 			"-loop", "0",
-			"-threads", "4",
+			"-threads", "1",
 		)
 
 		encodeOptions := transcoder.TranscodeOptions{

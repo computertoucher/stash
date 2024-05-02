@@ -152,8 +152,8 @@ func (e *ThumbnailEncoder) getClipPreview(inPath string, outPath string, maxSize
 	thumbArgs = append(thumbArgs,
 		"-pix_fmt", "yuv420p",
 		"-preset", o.Preset,
-		"-crf", "25",
-		"-threads", "4",
+		"-crf", "40",
+		"-threads", "2",
 		"-strict", "-2",
 		"-f", "webm",
 	)

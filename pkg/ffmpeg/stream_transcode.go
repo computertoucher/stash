@@ -26,15 +26,15 @@ func CodecInit(codec VideoCodec) (args Args) {
 	case VideoCodecLibX264:
 		args = append(args,
 			"-pix_fmt", "yuv420p",
-			"-preset", "veryfast",
-			"-crf", "25",
+			"-preset", "ultrafast",
+			"-crf", "30",
 			"-sc_threshold", "0",
 		)
 	case VideoCodecVP9:
 		args = append(args,
 			"-pix_fmt", "yuv420p",
 			"-deadline", "realtime",
-			"-cpu-used", "5",
+			"-cpu-used", "6",
 			"-row-mt", "1",
 			"-crf", "30",
 			"-b:v", "0",
@@ -43,16 +43,16 @@ func CodecInit(codec VideoCodec) (args Args) {
 	case VideoCodecN264:
 		args = append(args,
 			"-rc", "vbr",
-			"-cq", "15",
+			"-cq", "30",
 		)
 	case VideoCodecI264:
 		args = append(args,
-			"-global_quality", "20",
+			"-global_quality", "30",
 			"-preset", "faster",
 		)
 	case VideoCodecV264:
 		args = append(args,
-			"-qp", "20",
+			"-qp", "30",
 		)
 	case VideoCodecA264:
 		args = append(args,
@@ -65,16 +65,16 @@ func CodecInit(codec VideoCodec) (args Args) {
 	case VideoCodecO264:
 		args = append(args,
 			"-preset", "superfast",
-			"-crf", "25",
+			"-crf", "30",
 		)
 	case VideoCodecIVP9:
 		args = append(args,
-			"-global_quality", "20",
-			"-preset", "faster",
+			"-global_quality", "30",
+			"-preset", "superfast",
 		)
 	case VideoCodecVVP9:
 		args = append(args,
-			"-qp", "20",
+			"-qp", "30",
 		)
 	}
 

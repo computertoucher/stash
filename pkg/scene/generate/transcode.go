@@ -78,7 +78,8 @@ func (g Generator) transcode(input string, options TranscodeOptions) generateFn 
 			"-profile:v", "high",
 			"-level", "4.2",
 			"-preset", "superfast",
-			"-crf", "23",
+			"-crf", "30",
+			"-threads", "1",
 		)
 
 		args := transcoder.Transcode(input, transcoder.TranscodeOptions{
@@ -109,7 +110,8 @@ func (g Generator) transcodeVideo(input string, options TranscodeOptions) genera
 			"-profile:v", "high",
 			"-level", "4.2",
 			"-preset", "superfast",
-			"-crf", "23",
+			"-crf", "30",
+			"-threads", "1",
 		)
 
 		var audioArgs ffmpeg.Args

@@ -60,12 +60,13 @@ func (g Generator) markerPreviewVideo(input string, options sceneMarkerOptions) 
 			"-pix_fmt", "yuv420p",
 			"-profile:v", "high",
 			"-level", "4.2",
-			"-preset", "veryslow",
-			"-crf", "24",
+			"-preset", "ultrafast",
+			"-crf", "30",
 			"-movflags", "+faststart",
-			"-threads", "4",
-			"-sws_flags", "lanczos",
+			"-threads", "1",
+			"-sws_flags", "fast_bilinear",
 			"-strict", "-2",
+			"-threads", "1",
 		)
 
 		trimOptions := transcoder.TranscodeOptions{
@@ -122,11 +123,11 @@ func (g Generator) sceneMarkerWebp(input string, options sceneMarkerOptions) gen
 		videoArgs = videoArgs.VideoFilter(videoFilter)
 		videoArgs = append(videoArgs,
 			"-lossless", "1",
-			"-q:v", "70",
-			"-compression_level", "6",
+			"-q:v", "40",
+			"-compression_level", "5",
 			"-preset", "default",
 			"-loop", "0",
-			"-threads", "4",
+			"-threads", "2",
 		)
 
 		trimOptions := transcoder.TranscodeOptions{
