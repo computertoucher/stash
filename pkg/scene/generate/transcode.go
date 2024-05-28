@@ -78,7 +78,7 @@ func (g Generator) transcode(input string, options TranscodeOptions) generateFn 
 			"-profile:v", "high",
 			"-level", "4.2",
 			"-preset", "ultrafast",
-			"-crf", "25",
+			"-crf", "20",
 			"-threads", "1",
 		)
 
@@ -110,7 +110,7 @@ func (g Generator) transcodeVideo(input string, options TranscodeOptions) genera
 			"-profile:v", "high",
 			"-level", "4.2",
 			"-preset", "ultrafast",
-			"-crf", "25",
+			"-crf", "20",
 			"-threads", "1",
 		)
 

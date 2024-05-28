@@ -184,7 +184,7 @@ func (g Generator) previewVideoChunk(lockCtx *fsutil.LockContext, fn string, opt
 		"-profile:v", "high",
 		"-level", "4.2",
 		"-preset", options.Preset,
-		"-crf", "30",
+		"-crf", "25",
 		"-threads", "1",
 		"-movflags", "+faststart",
 		"-sws_flags", "fast_bilinear",
@@ -296,7 +296,7 @@ func (g Generator) previewVideoToImage(input string) generateFn {
 
 		videoArgs = append(videoArgs,
 			"-lossless", "0",
-			"-q:v", "40",
+			"-q:v", "25",
 			"-compression_level", "4",
 			"-preset", "default",
 			"-loop", "0",
